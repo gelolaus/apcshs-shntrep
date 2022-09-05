@@ -1,0 +1,19 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+
+    /* max-width: 500px !important; */
+    margin-top: 100px !important;
+    margin: auto;
+	font-family: 'Red Hat Display', sans-serif;
+
+}
+
+table, th, td {
+  border: 2px solid;
+  text-align: left;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
