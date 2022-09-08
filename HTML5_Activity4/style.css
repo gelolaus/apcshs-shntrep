@@ -38,9 +38,20 @@ body {
 
 }
 
-.column {
+.column1 {
 
-  text-align: center;
+    float: right;
+    width: 50%;
+
+}
+
+
+.column2 {
+
+    float: left;
+    width: 50%;
+
+
 }
 
 #form1 {
@@ -65,10 +76,10 @@ input[type=submit] {
     font-size: 15px;
     font-weight: 700;
     width: 100%;
-    background-color: #fbdf73;
+    background-color: #73fb73;
     color: black;
     padding: 14px 25px;
-    margin-top: 250px !important;
+    margin-top: 20px !important;
     margin: auto;
     border: none;
     border-radius: 10px;
