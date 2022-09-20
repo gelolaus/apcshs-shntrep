@@ -6,24 +6,6 @@ background: white;
 	font-size: 14px;
 	line-height: 18px;
 	min-width: 600px;
-	
-}
-h1 {
-	font-size: 20px;
-	line-height: 24px;
-}
-h2 {
-	font-size: 18px;
-	line-height: 22px;
-}
-h3 {
-	font-size: 16px;
-	line-height: 20px;
-}
-a {
-	background-color: inherit;
-	color: #996;
-	text-decoration: none;
 }
 
 blockquote {
