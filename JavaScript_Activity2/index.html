@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // Start counting number after a number given by user
+        let start = prompt("Enter a number to start counting from");
+        let end = prompt("Enter a number to end counting");
+
+        // If start number is above 100 then send error to user
+        if (start >= 100) {
+            alert("Number above 100");
+        }
+
+        // Show number from start to end to website
+        document.write("Counting from " + start + " to " + end + "<br>");
+        for (let i = start; i <= end; i++) {
+            document.write(i + "<br>");
+        }
+
+
+    </script>
+
+</body>
+</html>
