@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // List numbers in an array
+        let numbers = [25, 20, 7, 9, 35, 68, 46, 28, 55, 60, 4];
+
+        // Show the array numbers in an alert box
+        alert(numbers);
+
+        // Let the users select between the following index: '0', '1', '2', '3'
+        let index = prompt("Array: st, nd, rd, th | Choose between 0 to 3");
+        
+
+
+        // If user selects '0' then indent 'st' to all numbers in array then send to document.write
+        if (index == 0) {
+            document.write(numbers[0] + "st" + "<br>");
+            document.write(numbers[1] + "st" + "<br>");
+            document.write(numbers[2] + "st" + "<br>");
+            document.write(numbers[3] + "st" + "<br>");
+            document.write(numbers[4] + "st" + "<br>");
+            document.write(numbers[5] + "st" + "<br>");
+            document.write(numbers[6] + "st" + "<br>");
+            document.write(numbers[7] + "st" + "<br>");
+            document.write(numbers[8] + "st" + "<br>");
+            document.write(numbers[9] + "st" + "<br>");
+            document.write(numbers[10] + "st" + "<br>");
+        }
+
+        // If user selects '1' then indent 'nd' to all numbers in array then send to document.write
+        if (index == 1) {
+            document.write(numbers[0] + "nd" + "<br>");
+            document.write(numbers[1] + "nd" + "<br>");
+            document.write(numbers[2] + "nd" + "<br>");
+            document.write(numbers[3] + "nd" + "<br>");
+            document.write(numbers[4] + "nd" + "<br>");
+            document.write(numbers[5] + "nd" + "<br>");
+            document.write(numbers[6] + "nd" + "<br>");
+            document.write(numbers[7] + "nd" + "<br>");
+            document.write(numbers[8] + "nd" + "<br>");
+            document.write(numbers[9] + "nd" + "<br>");
+            document.write(numbers[10] + "nd" + "<br>");
+        }
+
+        // If user selects '2' then indent 'rd' to all numbers in array then send to document.write
+        if (index == 2) {
+            document.write(numbers[0] + "rd" + "<br>");
+            document.write(numbers[1] + "rd" + "<br>");
+            document.write(numbers[2] + "rd" + "<br>");
+            document.write(numbers[3] + "rd" + "<br>");
+            document.write(numbers[4] + "rd" + "<br>");
+            document.write(numbers[5] + "rd" + "<br>");
+            document.write(numbers[6] + "rd" + "<br>");
+            document.write(numbers[7] + "rd" + "<br>");
+            document.write(numbers[8] + "rd" + "<br>");
+            document.write(numbers[9] + "rd" + "<br>");
+            document.write(numbers[10] + "rd" + "<br>");
+        }
+
+        // If user selects '3' then indent 'th' to all numbers in array then send to document.write
+        if (index == 3) {
+            document.write(numbers[0] + "th" + "<br>");
+            document.write(numbers[1] + "th" + "<br>");
+            document.write(numbers[2] + "th" + "<br>");
+            document.write(numbers[3] + "th" + "<br>");
+            document.write(numbers[4] + "th" + "<br>");
+            document.write(numbers[5] + "th" + "<br>");
+            document.write(numbers[6] + "th" + "<br>");
+            document.write(numbers[7] + "th" + "<br>");
+            document.write(numbers[8] + "th" + "<br>");
+            document.write(numbers[9] + "th" + "<br>");
+            document.write(numbers[10] + "th" + "<br>");
+        }
+
+        // If user inputs a number that is not in the list then show an error to document.write
+        if (index > 3) {
+            document.write("Invalid input, only select a number from 0 to 3.");
+        }
+
+
+    </script>
+
+</body>
+</html>
