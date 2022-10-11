@@ -10,17 +10,11 @@
     
     <script>
 
-
-        // Print to document the index of a color selected by user
-        let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
-        let userColor = prompt("Enter a color from the rainbow to know its index: ");
-        let index = colors.indexOf(userColor);
-        document.write(index);
-
-        // If color is not in the array, print to document "Not a color in the rainbow"
-        if (index === -1) {
-            document.write(" Not a color in the rainbow");
-        }
+        // Let the user choose a color from their rainbow and output their array number
+        let color = prompt("Choose a color from the rainbow: red, orange, yellow, green, blue, indigo, violet");
+        let rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        let colorNumber = rainbow.indexOf(color);
+        document.write("The color " + color + " is number " + colorNumber + " in the rainbow");
 
     </script>
 
