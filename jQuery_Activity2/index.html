@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Form that asks for first number, operation, and second number in textbox-->
+    <form>
+
+        <input type="text" id="firstNumber" placeholder="First Number">
+        <select id="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <input type="text" id="secondNumber" placeholder="Second Number">
+        <input type="button" id="calculate" value="Calculate">
+
+        <!-- Result of calculation will be displayed here -->
+        <p><strong>Result: </strong></p>
+        <p id="answer"></p>
+
+    </form>
+
+    <script>
+
+        // jQuery function that runs when the calculate button is clicked then inputs the answer on the same page
+        $("#calculate").click(function() {
+            var firstNumber = $("#firstNumber").val();
+            var secondNumber = $("#secondNumber").val();
+            var operation = $("#operation").val();
+            var answer = 0;
+
+            // If statement that checks if the operation is add, subtract, multiply, or divide
+            if (operation == "add") {
+                answer = parseInt(firstNumber) + parseInt(secondNumber);
+            } else if (operation == "subtract") {
+                answer = parseInt(firstNumber) - parseInt(secondNumber);
+            } else if (operation == "multiply") {
+                answer = parseInt(firstNumber) * parseInt(secondNumber);
+            } else if (operation == "divide") {
+                answer = parseInt(firstNumber) / parseInt(secondNumber);
+            }
+
+            // Outputs the answer on the same page
+            $("#answer").html(answer);
+        });
+
+    </script>
+
+    <!--Clear button-->
+    <input type="button" id="clear" value="Clear">
+
+    <script>
+
+        // jQuery Clear button
+        $("#clear").click(function() {
+            $("#firstNumber").val("");
+            $("#secondNumber").val("");
+            $("#answer").html("");
+        });
+
+    </script>
+
+    
+</body>
+</html>
