@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Triangle Caculator</h1>
+
+    <!-- Form with dropdown that asks if the user wants to calculate perimeter or area of Triangle-->
+    <form>
+        <select id="operation">
+            <option value="perimeter">Perimeter</option>
+            <option value="area">Area</option>
+        </select>
+
+        <input type="text" id="firstNumber" placeholder="Side 1">
+        <input type="text" id="secondNumber" placeholder="Side 2">
+        <input type="text" id="thirdNumber" placeholder="Side 3">
+
+        <input type="button" id="calculate" value="Calculate">
+        <input type="button" id="clearForm" value="Clear Form">
+
+        <p><strong>Result: </strong></p>
+        <p id="answer"></p>
+
+    </form>
+
+    <script>
+
+        $("#calculate").click(calculate);
+
+        function calculate() {
+            var firstNumber = $("#firstNumber").val();
+            var operation = $("#operation").val();
+            var secondNumber = $("#secondNumber").val();
+            var thirdNumber = $("#thirdNumber").val();
+
+            firstNumber = parseInt(firstNumber);
+            secondNumber = parseInt(secondNumber);
+            thirdNumber = parseInt(thirdNumber);
+
+            if (operation == "perimeter") {
+                var result = firstNumber + secondNumber + thirdNumber;
+            }
+
+            // If area was selected in the dropdown, multiply the first two numbers and divide by 2
+            else if (operation == "area") {
+                var result = (firstNumber * secondNumber) / 2;
+            }
+
+            // Display the result in the result box
+            $("#answer").text(result);
+            }
+
+            // Else if area was selected in the dropdown, multiply the first two numbers only
+            if (operation == "area") {
+                var result = firstNumber * secondNumber;
+            }
+
+            if (operation == "area") {
+                    $("#thirdNumber").prop("disabled", true);
+                } else {
+                    $("#thirdNumber").prop("disabled", false);
+                }
+
+            // When clearform button is selected the form is cleared
+            $("#clearForm").click(function() {
+                $("#firstNumber").val("");
+                $("#secondNumber").val("");
+                $("#thirdNumber").val("");
+                $("#answer").text("");
+            });
+
+            // When the user changes their selection in the dropdown, all input boxes are cleared and hide thirdNumber textbox
+            $("#operation").change(function() {
+                $("#firstNumber").val("");
+                $("#secondNumber").val("");
+                $("#thirdNumber").val("");
+                $("#answer").text("");
+                var operation = $("#operation").val();
+                if (operation == "area") {
+                    $("#thirdNumber").hide();
+                } else {
+                    $("#thirdNumber").show();
+                }
+            });
+
+            // If area is selected in dropdownchange input box firstNumber placeholder to Base and secondNumber placeholder to Height
+            $("#operation").change(function() {
+                var operation = $("#operation").val();
+                if (operation == "area") {
+                    $("#firstNumber").attr("placeholder", "Base");
+                    $("#secondNumber").attr("placeholder", "Height");
+                } else {
+                    $("#firstNumber").attr("placeholder", "Side 1");
+                    $("#secondNumber").attr("placeholder", "Side 2");
+                }
+            });
+
+    </script>
+
+</body>
+</html>

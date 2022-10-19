@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-3.6.1.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -25,46 +25,65 @@
         <!-- Result of calculation will be displayed here -->
         <p><strong>Result: </strong></p>
         <p id="answer"></p>
+        <p id="odven"></p>
 
     </form>
 
     <script>
 
-        // jQuery function that runs when the calculate button is clicked then inputs the answer on the same page
-        $("#calculate").click(function() {
-            var firstNumber = $("#firstNumber").val();
-            var secondNumber = $("#secondNumber").val();
-            var operation = $("#operation").val();
-            var answer = 0;
+        // When the calculate button is clicked, the calculate function is called
+        $("#calculate").click(calculate);
 
-            // If statement that checks if the operation is add, subtract, multiply, or divide
+        // Function that calculates the result of the two numbers and operation
+        function calculate() {
+
+            // Get the first number, operation, and second number from the form
+            var firstNumber = $("#firstNumber").val();
+            var operation = $("#operation").val();
+            var secondNumber = $("#secondNumber").val();
+
+            // Convert the first and second number to integers
+            firstNumber = parseInt(firstNumber);
+            secondNumber = parseInt(secondNumber);
+
+            // If the operation is addition, add the two numbers
             if (operation == "add") {
-                answer = parseInt(firstNumber) + parseInt(secondNumber);
-            } else if (operation == "subtract") {
-                answer = parseInt(firstNumber) - parseInt(secondNumber);
-            } else if (operation == "multiply") {
-                answer = parseInt(firstNumber) * parseInt(secondNumber);
-            } else if (operation == "divide") {
-                answer = parseInt(firstNumber) / parseInt(secondNumber);
+                var result = firstNumber + secondNumber;
             }
 
-            // Outputs the answer on the same page
-            $("#answer").html(answer);
-        });
+            // If the operation is subtraction, subtract the two numbers
+            else if (operation == "subtract") {
+                var result = firstNumber - secondNumber;
+            }
 
-    </script>
+            // If the operation is multiplication, multiply the two numbers
+            else if (operation == "multiply") {
+                var result = firstNumber * secondNumber;
+            }
 
-    <!--Clear button-->
-    <input type="button" id="clear" value="Clear">
+            // If the operation is division, divide the two numbers
+            else if (operation == "divide") {
+                var result = firstNumber / secondNumber;
+            }
 
-    <script>
+            // Display the result
+            $("#answer").text(result);
 
-        // jQuery Clear button
-        $("#clear").click(function() {
-            $("#firstNumber").val("");
-            $("#secondNumber").val("");
-            $("#answer").html("");
-        });
+            // If the result is odd, display odd
+            if (result % 2 == 1) {
+                var oddEven = "odd";
+            }
+
+            // If the result is even, display even
+            else if (result % 2 == 0) {
+                var oddEven = "even";
+            }
+
+            // Display the oddEven
+                $("#odven").text(oddEven);
+            }  
+
+
 
     </script>
 

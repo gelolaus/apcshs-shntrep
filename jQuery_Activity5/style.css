@@ -1,0 +1,58 @@
+/* Import Open Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Create a modern CSS that fits mobile and web users */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Make the body look better on web */
+@media (min-width: 600px) {
+  body {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+}
+
+/* Make the body look better on mobile */
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+/* Create design for form input box and buttons */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Create design for button */
+inpit[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Design for dropdown box with black border */
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: 10px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
