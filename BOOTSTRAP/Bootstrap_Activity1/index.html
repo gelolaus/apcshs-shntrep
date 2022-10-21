@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 align="center"c>Bootstrap Grid</h1>
+                <p align="center">Created by the Rangya Development Team</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar2.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar4.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar5.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+            <div class="col-md-4">
+                <img src="https://www.w3schools.com/bootstrap4/img_avatar6.png" class="img-fluid" alt="Responsive image">
+                <h3>Bootstrap Grid</h3>
+                <p>&copy; Rangya Dev Team</p>
+            </div>
+        </div>
+
+        <script>
+
+            $(document).ready(function(){
+                $(".row").hide();
+                $(".row").fadeIn(1000);
+            });
+
+            // Bootstrap hover animation
+            $(document).ready(function(){
+                $(".col-md-4").hover(function(){
+                    $(this).animate({
+                        marginTop: "-=1%",
+                    },200);
+                }, function(){
+                    $(this).animate({
+                        marginTop: "0%",
+                    },200);
+                });
+            });
+
+
+
+        </script>
+
+</body>
+</html>
