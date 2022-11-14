@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery Import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+
+        button {
+            background-color: gray;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button id="clickToRun">Click to run</button>
+
+    <script>
+
+        $("#clickToRun").click(function() {
+            let userNum = prompt("Enter a nonnegative integer");
+            let result = 0;
+            if (userNum < 0) {
+                alert("Invalid input: negative integer");
+            } else {
+                for (let i = 0; i <= userNum; i++) {
+                    result += Math.pow(2, i);
+                }
+                alert("The sum of all powers of 2 until that number is: " + (result - 1));
+            }
+        });
+
+    </script>
+
+</body>
+</html>

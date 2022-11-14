@@ -1,0 +1,88 @@
+/* Add rainbow color animation to background of website */
+body {
+  background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+  background-size: 600% 600%;
+  animation: rainbow 10s ease infinite;
+}
+
+/* Add animation to background */
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Make h1 50px then move it around the screen randomly using CSS animation */
+h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: move 5s ease infinite;
+}
+
+/* Keyframes move h1 around the screen */
+@keyframes move {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  25% {
+    top: 0%;
+    left: 0%;
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+  }
+  75% {
+    top: 0%;
+    left: 100%;
+  }
+  100% {
+    top: 100%;
+    left: 0%;
+  }
+}
+
+/* Make h2 50px then move it around the screen randomly using CSS animation */
+h2 {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: move2 5s ease infinite;
+}
+
+/* Keyframes move2 h2 up then down then left then right then back to original place */
+@keyframes move2 {
+  0% {
+    top: 50%;
+    left: 50%;
+  }
+  25% {
+    top: 0%;
+    left: 50%;
+  }
+  50% {
+    top: 50%;
+    left: 0%;
+  }
+  75% {
+    top: 50%;
+    left: 100%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
